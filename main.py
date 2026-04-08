@@ -1,4 +1,5 @@
 import pygame
+
 from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
 from logger import log_state
@@ -20,6 +21,7 @@ def main():
         for event in pygame.event.get():
             pass
         screen.fill("black")
+        player.update(delta_seconds)
         player.draw(screen)
         pygame.display.flip()
         delta_seconds = gameloop_clock.tick(60) / 1000
